@@ -1,0 +1,241 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css')
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ' crossorigin='anonymous')
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous' referrerpolicy='no-referrer')
+        link(rel="stylesheet", href="lib/bootstrap-grid.min.css")
+        link(rel="stylesheet", href="lib/bootstrap-utilities.min.css")
+        link(rel="stylesheet", href="lib/bootstrap-reboot.css")
+        link(rel="stylesheet", href="css/main.css")
+        title Document
+    body 
+        -
+            let salom = [
+                {   
+                    subtitle: "Комфортная температура",
+                    desc: "Во всех номерах поддерживается комфортная температура в пределах 23  - 25 градусов. В каждом номере можно дополнительно отрегулировать температуру. "
+                },
+                {
+                    subtitle: "Видеонаблюдение",
+                    desc: "Мы предоставляем доступ в нашу систему. Вы сможете следить за своим питомцем со своего смартфона или компьютера."
+                },
+                {
+                    subtitle: "Услуги Зоотакси",
+                    desc: "Мы приедем за вашим питомцем в любой район Санкт-Петербурга."
+                },
+                {
+                    subtitle: "Сбалансированное питание",
+                    desc: "Вы можете привезти свой корм или доверить рацион своего питомца нашим профессионалам."
+                },
+                {
+                    subtitle: "Ежедневные прогулки",
+                    desc: "По вашему желанию мы выгуливаем вашего питомца два раза в день на специализированной закрытой территории."
+                },
+                {
+                    subtitle: "Лучшие ветеринары",
+                    desc: "В гостинице 24 часа дежурит ветеринарный врач, который окажет любую помощь в случае необходимости."
+                }
+            ];
+        -
+            let otziv = [
+                {
+                    desc: "Первый раз пришлось оставить нашего котикав гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца, рассказывала, как он себя чувствует. И мы и котик остались очень довольны!",
+                    name: "Валерия Гришаева",
+                    date: "15 ноября, 2019"
+                },
+                {
+                    desc: "Гостиницу для питомцев нам посоветовали друзья. Они всегда оставляют здесь своего кота, когда уезжают. В “Котейке” очень хорошо заботятся о питомцах, в гостинице очень чисто. Всем рекомендую! Будем обращаться еще.",
+                    name: "Екатерина Минаева",
+                    date: "10 октября, 2019"
+                }
+            ];
+        -
+            let nas = [
+                {
+                    p: "Адрес",
+                    span: "Санкт-Петербург ул Большая Конюшенная, д 19"
+                },
+                {
+                    p: "Режим работы",
+                    span: "Ежедневно, с 9:00 до 20:00"
+                },
+                {
+                    p: "Телефон",
+                    span: "8 (800) 333-55-99"
+                },
+                {
+                    p: "E-mail",
+                    span: "info@cat-hotel.ru"
+                }
+            ];  
+        header.header
+            .container
+                .col-md-2
+                    .header__logo 
+                        img(src="img/header__logo.png", alt="header__logo")
+                .offset-7.col-md-6
+                    .header__menu
+                        ul
+                            li
+                                a(href="#") Почему мы?
+                            li
+                                a(href="#") Номера
+                            li
+                                a(href="#") Отзывы
+                            li
+                                a(href="#") Как нас найти
+                .header__bars
+                    i.fa-solid.fa-bars(data-bs-toggle='offcanvas' data-bs-target='#offcanvasWithBothOptions' aria-controls='offcanvasWithBothOptions')
+                #offcanvasWithBothOptions.offcanvas.offcanvas-start(data-bs-scroll='true' tabindex='-1' aria-labelledby='offcanvasWithBothOptionsLabel')
+                    .offcanvas-header
+                        img(src='img/header__logo.png' alt='logo')
+                        a(href='#')
+                        i.fa-regular.fa-circle-xmark(style='font-size: 35px; color: #000' data-bs-dismiss='offcanvas' aria-label='Close')
+                    .offcanvas-body
+                        ul
+                        li
+                            a(href='#') Почему мы?
+                        li
+                            a(href='#') Номера
+                        li
+                            a(href='#') Отзывы
+                        li
+                            a(href='#') Контакты
+                        li
+                            a(href='#') 8 (800) 333-55-99
+                        li
+                            a(href="#") 
+                                i.bi.bi-facebook
+                                i.bi.bi-instagram
+                                .fa-brands.fa-vk
+        section.home.col-12
+            .container
+                .home__subtitle
+                    span Санкт-Петербург
+                .home__title
+                    h2 КОТЕЙКА
+                .home__desc
+                    p    Уютная гостиница для котов и кошек 
+                .home__bn.bn 
+                    a(href="zakaz.html") 
+                        button.bn
+                            span Забронировать
+                            img(src="img/btn__img.png", alt="btn")
+                    
+
+        section.pochemu.col-12 
+            .container
+                .pochemu__title
+                    h2 Почему мы?
+                .pochemu__img 
+                    img(src="img/pochemu__pos.png", alt="pos")        
+                .pochemu__card
+                    .row
+                        each pochemu in salom
+                            .card.col-sm-12.col-md-3 
+                                .card__img 
+                                    img(src="img/pochemu__1.png", alt="1")
+                                .card__subtitle
+                                    h4= pochemu.subtitle 
+                                .card__desc     
+                                    p= pochemu.desc 
+        section.nomer
+            .container
+                .nomer__pos
+                    img(src="img/nomer__pos.png", alt="posm")
+                .nomer__title
+                    h2 Номера
+                .row 
+                    .col-md-6 
+                        .nomer__img.col-6
+                            img(src="img/nomer__img.png", alt="nomer")                            
+                    .ekanom__text.col-md-6
+                        .ekanom__title
+                            h4 Эконом плюс
+                        i.bi.bi-circle-fill 
+                            p Площадь - 0,90 м2
+                        i.bi.bi-circle-fill 
+                            p Размеры (ШхГхВ) — 90х100х180 см
+                        i.bi.bi-circle-fill 
+                            p Цена за сутки: 200₽
+                        .ekanom__btn.bn 
+                            a(href="zakaz.html")
+                                button.bn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal") 
+                                    span Отправить заявку
+                                    img(src="img/btn__img.png", alt="btn")
+                .nomer__radio.radio 
+                    form.form(action="#")
+                        input(type="radio")
+                        input(type="radio")
+                        input(type="radio")
+                .nomer__btn.btn.col-md-2.offset-md-11 
+                    i.bi.bi-chevron-left
+                .nomer__btn.btn 
+                    i.bi.bi-chevron-right
+        section.otziv
+            .container
+                .otzivi__title
+                    h4 Отзывы
+                .row
+                    each asus in otziv
+                        .col-md-6 
+                            .otziv__block 
+                                .block__img 
+                                    img(src="img/block__img.png", alt="block")
+                                    .block__desc 
+                                        p= asus.desc 
+                                .block__name 
+                                    span= asus.name 
+                                    p= asus.date
+                .otziv__radio.radio 
+                    form.form(action="#")
+                        input(type="radio")
+                        input(type="radio")
+                        input(type="radio")
+        section.kak
+            .container
+                .row
+                    .col-md-4.kak__nas
+                        .kak__title 
+                            h2 Как нас найти
+                        each kak in nas 
+                            .nas__title 
+                                p= kak.p 
+                                span= kak.span 
+                        .nas__link 
+                                p Социальные сети
+                                a(href="#") 
+                                    i.bi.bi-facebook 
+                                a(href="#") 
+                        dd            i.bi.bi-instagram 
+                                a(href="#")
+                                    .fa-brands.fa-vk
+                    .col-md-8 
+                        .kak__img 
+                            img(src="img/kak__img.png", alt="img")
+        footer.footer
+            .container 
+                .col-1
+                    .footer__logo 
+                        img(src="img/header__logo.png", alt="header__logo")
+                .offset-6.col-6.col-6
+                    .footer__menu
+                        ul
+                            li
+                                a(href="#") Почему мы?
+                            li
+                                a(href="#") Номера
+                            li
+                                a(href="#") Отзывы
+                            li
+                                a(href="#") Как нас найти
+                .footer__date 
+                    p.col-2 2019 Все права защищены
+                    p.col-3.offset-7 Политика конфиденциальности
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+
+        

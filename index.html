@@ -1,0 +1,253 @@
+   doctype html
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="lib/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="lib/bootstrap-utilities.min.css"/>
+    <link rel="stylesheet" href="lib/bootstrap-reboot.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Document</title>
+  </head>
+  <body> 
+    <header class="header">
+      <div class="container">
+        <div class="col-md-2">
+          <div class="header__logo"> <img src="img/header__logo.png" alt="header__logo"/></div>
+        </div>
+        <div class="offset-7 col-md-6">
+          <div class="header__menu">
+            <ul>
+              <li><a href="#">Почему мы?</a></li>
+              <li><a href="#">Номера</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Как нас найти</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__bars"><i class="fa-solid fa-bars" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"></i></div>
+        <div class="offcanvas offcanvas-start" id="offcanvasWithBothOptions" data-bs-scroll="true" tabindex="-1" aria-labelledby="offcanvasWithBothOptionsLabel">
+          <div class="offcanvas-header"><img src="img/header__logo.png" alt="logo"/><a href="#"></a><i class="fa-regular fa-circle-xmark" style="font-size: 35px; color: #000" data-bs-dismiss="offcanvas" aria-label="Close"></i></div>
+          <div class="offcanvas-body">
+            <ul></ul>
+            <li><a href="#">Почему мы?</a></li>
+            <li><a href="#">Номера</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">8 (800) 333-55-99</a></li>
+            <li><a href="#"> <i class="bi bi-facebook"></i><i class="bi bi-instagram"></i>
+                <div class="fa-brands fa-vk"></div></a></li>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="home col-12">
+      <div class="container">
+        <div class="home__subtitle"><span>Санкт-Петербург</span></div>
+        <div class="home__title">
+          <h2>КОТЕЙКА</h2>
+        </div>
+        <div class="home__desc">
+          <p>   Уютная гостиница для котов и кошек </p>
+        </div>
+        <div class="home__bn bn"> <a href="zakaz.html"> 
+            <button class="bn"><span>Забронировать</span><img src="img/btn__img.png" alt="btn"/></button></a></div>
+      </div>
+    </section>
+    <section class="pochemu col-12"> 
+      <div class="container">
+        <div class="pochemu__title">
+          <h2>Почему мы?</h2>
+        </div>
+        <div class="pochemu__img"> <img src="img/pochemu__pos.png" alt="pos"/></div>
+        <div class="pochemu__card">
+          <div class="row">
+            <div class="card col-sm-12 col-md-3"> 
+              <div class="card__img"> <img src="img/pochemu__1.png" alt="1"/></div>
+              <div class="card__subtitle">
+                <h4>Комфортная температура</h4>
+              </div>
+              <div class="card__desc">    
+                <p>Во всех номерах поддерживается комфортная температура в пределах 23  - 25 градусов. В каждом номере можно дополнительно отрегулировать температуру. </p>
+              </div>
+            </div>
+            <div class="card col-sm-12 col-md-3"> 
+              <div class="card__img"> <img src="img/pochemu__1.png" alt="1"/></div>
+              <div class="card__subtitle">
+                <h4>Видеонаблюдение</h4>
+              </div>
+              <div class="card__desc">    
+                <p>Мы предоставляем доступ в нашу систему. Вы сможете следить за своим питомцем со своего смартфона или компьютера.</p>
+              </div>
+            </div>
+            <div class="card col-sm-12 col-md-3"> 
+              <div class="card__img"> <img src="img/pochemu__1.png" alt="1"/></div>
+              <div class="card__subtitle">
+                <h4>Услуги Зоотакси</h4>
+              </div>
+              <div class="card__desc">    
+                <p>Мы приедем за вашим питомцем в любой район Санкт-Петербурга.</p>
+              </div>
+            </div>
+            <div class="card col-sm-12 col-md-3"> 
+              <div class="card__img"> <img src="img/pochemu__1.png" alt="1"/></div>
+              <div class="card__subtitle">
+                <h4>Сбалансированное питание</h4>
+              </div>
+              <div class="card__desc">    
+                <p>Вы можете привезти свой корм или доверить рацион своего питомца нашим профессионалам.</p>
+              </div>
+            </div>
+            <div class="card col-sm-12 col-md-3"> 
+              <div class="card__img"> <img src="img/pochemu__1.png" alt="1"/></div>
+              <div class="card__subtitle">
+                <h4>Ежедневные прогулки</h4>
+              </div>
+              <div class="card__desc">    
+                <p>По вашему желанию мы выгуливаем вашего питомца два раза в день на специализированной закрытой территории.</p>
+              </div>
+            </div>
+            <div class="card col-sm-12 col-md-3"> 
+              <div class="card__img"> <img src="img/pochemu__1.png" alt="1"/></div>
+              <div class="card__subtitle">
+                <h4>Лучшие ветеринары</h4>
+              </div>
+              <div class="card__desc">    
+                <p>В гостинице 24 часа дежурит ветеринарный врач, который окажет любую помощь в случае необходимости.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="nomer">
+      <div class="container">
+        <div class="nomer__pos"><img src="img/nomer__pos.png" alt="posm"/></div>
+        <div class="nomer__title">
+          <h2>Номера</h2>
+        </div>
+        <div class="row"> 
+          <div class="col-md-6"> 
+            <div class="nomer__img col-6"><img src="img/nomer__img.png" alt="nomer"/></div>
+          </div>
+          <div class="ekanom__text col-md-6">
+            <div class="ekanom__title">
+              <h4>Эконом плюс</h4>
+            </div><i class="bi bi-circle-fill"> 
+              <p>Площадь - 0,90 м2</p></i><i class="bi bi-circle-fill"> 
+              <p>Размеры (ШхГхВ) — 90х100х180 см</p></i><i class="bi bi-circle-fill"> 
+              <p>Цена за сутки: 200₽</p></i>
+            <div class="ekanom__btn bn"> <a href="zakaz.html">
+                <button class="bn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> <span>Отправить заявку</span><img src="img/btn__img.png" alt="btn"/></button></a></div>
+          </div>
+        </div>
+        <div class="nomer__radio radio"> 
+          <form class="form" action="#">
+            <input type="radio"/>
+            <input type="radio"/>
+            <input type="radio"/>
+          </form>
+        </div>
+        <div class="nomer__btn btn col-md-2 offset-md-11"> <i class="bi bi-chevron-left"></i></div>
+        <div class="nomer__btn btn"> <i class="bi bi-chevron-right"></i></div>
+      </div>
+    </section>
+    <section class="otziv">
+      <div class="container">
+        <div class="otzivi__title">
+          <h4>Отзывы</h4>
+        </div>
+        <div class="row">
+          <div class="col-md-6"> 
+            <div class="otziv__block"> 
+              <div class="block__img"> <img src="img/block__img.png" alt="block"/>
+                <div class="block__desc"> 
+                  <p>Первый раз пришлось оставить нашего котикав гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца, рассказывала, как он себя чувствует. И мы и котик остались очень довольны!</p>
+                </div>
+              </div>
+              <div class="block__name"> <span>Валерия Гришаева</span>
+                <p>15 ноября, 2019</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6"> 
+            <div class="otziv__block"> 
+              <div class="block__img"> <img src="img/block__img.png" alt="block"/>
+                <div class="block__desc"> 
+                  <p>Гостиницу для питомцев нам посоветовали друзья. Они всегда оставляют здесь своего кота, когда уезжают. В “Котейке” очень хорошо заботятся о питомцах, в гостинице очень чисто. Всем рекомендую! Будем обращаться еще.</p>
+                </div>
+              </div>
+              <div class="block__name"> <span>Екатерина Минаева</span>
+                <p>10 октября, 2019</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="otziv__radio radio"> 
+          <form class="form" action="#">
+            <input type="radio"/>
+            <input type="radio"/>
+            <input type="radio"/>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="kak">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 kak__nas">
+            <div class="kak__title"> 
+              <h2>Как нас найти</h2>
+            </div>
+            <div class="nas__title"> 
+              <p>Адрес</p><span>Санкт-Петербург ул Большая Конюшенная, д 19</span>
+            </div>
+            <div class="nas__title"> 
+              <p>Режим работы</p><span>Ежедневно, с 9:00 до 20:00</span>
+            </div>
+            <div class="nas__title"> 
+              <p>Телефон</p><span>8 (800) 333-55-99</span>
+            </div>
+            <div class="nas__title"> 
+              <p>E-mail</p><span>info@cat-hotel.ru</span>
+            </div>
+            <div class="nas__link"> 
+              <p>Социальные сети</p><a href="#"> <i class="bi bi-facebook"> </i></a><a href="#"> </a>
+            </div>
+            <dd>           i.bi.bi-instagram <a href="#">
+                <div class="fa-brands fa-vk"></div></a></dd>
+          </div>
+          <div class="col-md-8"> 
+            <div class="kak__img"> <img src="img/kak__img.png" alt="img"/></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container"> 
+        <div class="col-1">
+          <div class="footer__logo"> <img src="img/header__logo.png" alt="header__logo"/></div>
+        </div>
+        <div class="offset-6 col-6 col-6">
+          <div class="footer__menu">
+            <ul>
+              <li><a href="#">Почему мы?</a></li>
+              <li><a href="#">Номера</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Как нас найти</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__date"> 
+          <p class="col-2">2019 Все права защищены</p>
+          <p class="col-3 offset-7">Политика конфиденциальности</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

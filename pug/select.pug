@@ -1,0 +1,374 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        link(rel="stylesheet", href="lib/bootstrap-grid.min.css")
+        link(rel="stylesheet", href="lib/bootstrap-reboot.css")
+        link(rel="stylesheet", href="lib/bootstrap-utilities.min.css")
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css')
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css")
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css', rel='stylesheet', integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC', crossorigin='anonymous')
+        link(rel="stylesheet", href="css/main.css")
+        link(rel="stylesheet", href="css/zakaz.css")
+        link(rel="stylesheet", href="css/select.css")
+        title select
+    body
+        -
+            let nas = [
+                {
+                    p: "Адрес",
+                    span: "Санкт-Петербург ул Большая Конюшенная, д 19"
+                },
+                {
+                    p: "Режим работы",
+                    span: "Ежедневно, с 9:00 до 20:00"
+                },
+                {
+                    p: "Телефон",
+                    span: "8 (800) 333-55-99"
+                },
+                {
+                    p: "E-mail",
+                    span: "info@cat-hotel.ru"
+                }
+            ];
+        -
+            let ekonom = [
+                {
+                    title: "Эконом",
+                    razmeri: "Размеры (ШхГхВ) - 90х70х180 см",
+                    ploshad: "Площадь - 0,63 м2",
+                    osnasheniye: "Оснащение номера",
+                    sena: "Цена за сутки:",
+                    rubl: "100₽"
+                },
+            ];
+        -
+            let superlyuks = [
+                {
+                    title: "Супер-Люкс",
+                    razmeri: "Размеры (ШхГхВ) - 180х160х180 см",
+                    ploshad: "Площадь - 2,88 м2",
+                    osnasheniye: "Оснащение номера",
+                    sena: "Цена за сутки:",
+                    rubl: "600₽"
+                }
+            ];
+        -
+            let lyuks = [
+                {
+                    title: "Люкс",
+                    razmeri: "Размеры (ШхГхВ) - 160х160х180 см",
+                    ploshad: "Площадь - 2,56 м2",
+                    osnasheniye: "Оснащение номера",
+                    sena: "Цена за сутки:",
+                    rubl: "500₽"
+                },
+            ];
+        -
+            let komfort = [
+                {
+                    title: "Комфорт",
+                    razmeri: "Размеры (ШхГхВ) - 100х125х180 см",
+                    ploshad: "Площадь - 1,13 м2",
+                    osnasheniye: "Оснащение номера",
+                    sena: "Цена за сутки:",
+                    rubl: "250₽"
+                },
+            ];
+        header.header
+            .container
+                .col-md-2
+                    .header__logo 
+                        img(src="img/header__logo.png", alt="header__logo")
+                .offset-6.col-md-6
+                    .header__menu
+                        ul
+                            li
+                                a(href="#") Почему мы?
+                            li
+                                a(href="#") Номера
+                            li
+                                a(href="#") Отзывы
+                            li
+                                a(href="#") Как нас найти
+                .header__bars
+                    i.fa-solid.fa-bars(data-bs-toggle='offcanvas' data-bs-target='#offcanvasWithBothOptions' aria-controls='offcanvasWithBothOptions')
+                #offcanvasWithBothOptions.offcanvas.offcanvas-start(data-bs-scroll='true' tabindex='-1' aria-labelledby='offcanvasWithBothOptionsLabel')
+                    .offcanvas-header
+                        img(src='img/header__logo.png' alt='logo')
+                        a(href='#')
+                        i.fa-regular.fa-circle-xmark(style='font-size: 35px; color: #000' data-bs-dismiss='offcanvas' aria-label='Close')
+                    .offcanvas-body
+                        ul
+                        li
+                            a(href='#') Почему мы?
+                        li
+                            a(href='#') Номера
+                        li
+                            a(href='#') Отзывы
+                        li
+                            a(href='#') Контакты
+                        li
+                            a(href='#') 8 (800) 333-55-99
+                        li
+                            a(href="#") 
+                                i.bi.bi-facebook
+                                i.bi.bi-instagram
+                                .fa-brands.fa-vk
+        section.tab 
+            .container 
+                .row 
+                    .col-md-12 
+                        .d-flex.align-items-start
+                            #v-pills-tab.nav.flex-column.nav-pills.me-3(role='tablist' aria-orientation='vertical')
+                                #v-pills-img1-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-img1' type='button' role='tab' aria-controls='v-pills-img1' aria-selected='true')
+                                    img(src="img/select1.png", alt="link1")
+                                #v-pills-img2-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-img2' type='button' role='tab' aria-controls='v-pills-img2' aria-selected='false')
+                                    img(src="img/select2.png", alt="link1")
+                                #v-pills-img3-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-img3' type='button' role='tab' aria-controls='v-pills-img3' aria-selected='false')
+                                    img(src="img/select3.png", alt="link1")
+                            #v-pills-tabContent.tab-content
+                                #v-pills-img1.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-img1-tab') 
+                                    .row 
+                                        .col-6   
+                                            img(src="img/select1.png", alt="content3")
+                                        .col-6.col-sm-12.col-lg-6.col-xl-6  
+                                            .tab-title
+                                                each card in ekonom 
+                                                    h3= card.title 
+                                                    p= card.razmeri
+                                                    p= card.ploshad
+                                                    p= card.osnasheniya
+                                                    p= card.sena
+                                                        span= card.rubl
+                                                    .card__btn.bn(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal")
+                                                        button.bn
+                                                            span Забронировать
+                                                        .modal.fade#exampleModal( tabindex="-1" aria-labelledby="#exampleModalLabel" aria-hidden="true")
+                                                            .modal-dialog
+                                                                .modal-content 
+                                                                    .modal-header 
+                                                                        p.modal-title.fs-5#exampleModalLabel Забронировать номер
+                                                                        button.btn-close.bi.bi-x-lg(type="button" data-bs-dismiss="modal" aria-label="Close")
+                                                                        img.modal-img(src="img/pochemu__pos.png", alt="pochemu")
+                                                                    .modal-body
+                                                                        form.form(action="#")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Ваше имя")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Имя Питомца")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Телефон")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="E-mail")
+                                                                        .body-date 
+                                                                                p Дата заезда
+                                                                                p с
+                                                                                span 26.01.2020
+                                                                                p по
+                                                                                span 26.02.2020
+                                                                        .body-bn
+                                                                            button.bn 
+                                                                                    span Отправить заявку
+                                #v-pills-img2.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-img1-tab') 
+                                    .row 
+                                        .col-6   
+                                            img(src="img/select2.png", alt="content3")
+                                        .col-6.col-sm-12.col-lg-6.col-xl-6  
+                                            .tab-title
+                                                each card in lyuks 
+                                                    h3= card.title 
+                                                    p= card.razmeri
+                                                    p= card.ploshad
+                                                    p= card.osnasheniya
+                                                    p= card.sena
+                                                        span= card.rubl
+                                                    .card__btn.bn(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3")
+                                                        button.bn
+                                                            span Забронировать
+                                                        .modal.fade#exampleModal3( tabindex="-1" aria-labelledby="#exampleModalLabel3" aria-hidden="true")
+                                                            .modal-dialog
+                                                                .modal-content 
+                                                                    .modal-header 
+                                                                        p.modal-title.fs-5#exampleModalLabel3 Забронировать номер
+                                                                        button.btn-close.bi.bi-x(type="button" data-bs-dismiss="modal" aria-label="Close")
+                                                                        img.modal-img(src="img/pochemu__pos.png", alt="pochemu")
+                                                                    .modal-body
+                                                                        form.form(action="#")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Ваше имя")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Имя Питомца")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Телефон")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="E-mail")
+                                                                        .body-date 
+                                                                                p Дата заезда
+                                                                                p с
+                                                                                span 26.01.2020
+                                                                                p по
+                                                                                span 26.02.2020
+                                                                        .body-bn
+                                                                            button.bn 
+                                                                                    span Отправить заявку
+                                #v-pills-img3.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-img1-tab') 
+                                    .row 
+                                        .col-6   
+                                            img(src="img/select3.png", alt="content3")
+                                        .col-6.col-sm-12.col-lg-6.col-xl-6  
+                                            .tab-title
+                                                each card in komfort 
+                                                    h3= card.title 
+                                                    p= card.razmeri
+                                                    p= card.ploshad
+                                                    p= card.osnasheniya
+                                                    p= card.sena
+                                                        span= card.rubl
+                                                    .card__btn.bn(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal4")
+                                                        button.bn
+                                                            span Забронировать
+                                                        .modal.fade#exampleModal4( tabindex="-1" aria-labelledby="#exampleModalLabel4" aria-hidden="true")
+                                                            .modal-dialog
+                                                                .modal-content 
+                                                                    .modal-header 
+                                                                        p.modal-title.fs-5#exampleModalLabel4 Забронировать номер
+                                                                        button.btn-close.fa-regular.fa-circle-xmark(type="button" data-bs-dismiss="modal" aria-label="Close")
+                                                                        img.modal-img(src="img/pochemu__pos.png", alt="pochemu")
+                                                                    .modal-body
+                                                                        form.form(action="#")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Ваше имя")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Имя Питомца")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Телефон")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="E-mail")
+                                                                        .body-date 
+                                                                                p Дата заезда
+                                                                                p с
+                                                                                span 26.01.2020
+                                                                                p по
+                                                                                span 26.02.2020
+                                                                        .body-bn
+                                                                            button.bn 
+                                                                                    span Отправить заявку
+                                #v-pills-img4.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='v-pills-img4-tab')
+                                    .row 
+                                        .col-6   
+                                            img(src="img/select4.png", alt="content3")
+                                        .col-6.col-sm-12.col-lg-6.col-xl-6  
+                                            .tab-title
+                                                each card in superlyuks 
+                                                    h3= card.title 
+                                                    p= card.razmeri
+                                                    p= card.ploshad
+                                                    p= card.osnasheniya
+                                                    p= card.sena
+                                                        span= card.rubl
+                                                    .card__btn.bn(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal5")
+                                                        button.bn
+                                                            span Забронировать
+                                                        .modal.fade#exampleModal5( tabindex="-1" aria-labelledby="#exampleModalLabel5" aria-hidden="true")
+                                                            .modal-dialog
+                                                                .modal-content 
+                                                                    .modal-header 
+                                                                        p.modal-title.fs-5#exampleModalLabel5 Забронировать номер
+                                                                        button.btn-close.fa-regular.fa-circle-xmark(type="button" data-bs-dismiss="modal" aria-label="Close")
+                                                                        img.modal-img(src="img/pochemu__pos.png", alt="pochemu")
+                                                                    .modal-body
+                                                                        form.form(action="#")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Ваше имя")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Имя Питомца")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="Телефон")
+                                                                            p.form-input    
+                                                                                input(type="email" placeholder="E-mail")
+                                                                        .body-date 
+                                                                                p Дата заезда
+                                                                                p с
+                                                                                span 26.01.2020
+                                                                                p по
+                                                                                span 26.02.2020
+                                                                        .body-bn
+                                                                            button.bn 
+                                                                                    span Отправить заявку
+        section.nome
+            .container
+                .nomer__pos
+                    img(src="img/nomer__pos.png", alt="posm")
+                .nomer__title
+                    h2 Номера
+                .row 
+                    .col-md-6 
+                        .nomer__img.col-6
+                            img(src="img/nomer__img.png", alt="nomer")                            
+                    .ekanom__text.col-md-6
+                        .ekanom__title
+                            h4 Эконом плюс
+                        i.bi.bi-circle-fill 
+                            p Площадь - 0,90 м2
+                        i.bi.bi-circle-fill 
+                            p Размеры (ШхГхВ) — 90х100х180 см
+                        i.bi.bi-circle-fill 
+                            p Цена за сутки: 200₽
+                        .ekanom__btn.bn 
+                            button.bn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal") 
+                                span Отправить заявку
+                                img(src="img/btn__img.png", alt="btn")
+                .nomer__radio.radio 
+                    form.form(action="#")
+                        input(type="radio")
+                        input(type="radio")
+                        input(type="radio")
+                .nomer__btn.btn.col-md-2.offset-md-11 
+                    i.bi.bi-chevron-left
+                .nomer__btn.btn 
+                    i.bi.bi-chevron-right
+        section.kak
+            .container
+                .row
+                    .col-md-4.kak__nas
+                        .kak__title 
+                            h2 Как нас найти
+                        each kak in nas 
+                            .nas__title 
+                                p= kak.p 
+                                span= kak.span 
+                        .nas__link 
+                                p Социальные сети
+                                a(href="#") 
+                                    i.bi.bi-facebook 
+                                a(href="#") 
+                                    i.bi.bi-instagram 
+                                a(href="#")
+                                    .fa-brands.fa-vk
+                    .col-md-8 
+                        .kak__img 
+                            img(src="img/kak__img.png", alt="img")
+        footer.footer
+            .container 
+                .col-1
+                    .footer__logo 
+                        img(src="img/header__logo.png", alt="header__logo")
+                .offset-6.col-6.col-6
+                    .footer__menu
+                        ul
+                            li
+                                a(href="#") Почему мы?
+                            li
+                                a(href="#") Номера
+                            li
+                                a(href="#") Отзывы
+                            li
+                                a(href="#") Как нас найти
+                .footer__date 
+                    p.col-2 2019 Все права защищены
+                    p.col-3.offset-7 Политика конфиденциальности
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM', crossorigin='anonymous')
